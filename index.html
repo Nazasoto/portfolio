@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naza - Portfolio</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/theme.css">
+    <link rel="stylesheet" href="./styles/sections/about.css">
+</head>
+<body>
+    <!-- Barra lateral -->
+    <button class="hamburger" aria-label="Menú principal">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+  </button>
+
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="#about" class="navbar__link">ABOUT</a></li>
+            <li class="navbar__item"><a href="#experience" class="navbar__link">EXPERIENCE</a></li>
+            <li class="navbar__item"><a href="#projects" class="navbar__link">PROJECTS</a></li>
+            <li class="navbar__item"><a href="#contacts" class="navbar__link">CONTACTS</a></li>
+        </ul>
+        <div class="navbar__separator"></div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content">
+        <section id="about" class="section">
+          <div class="section-container">
+            <div class="about-grid">
+                <!-- Columna Izquierda - Texto -->
+                <div class="about-content">
+                    <h1 class="about-title fade-in" data-delay="0.1s">
+                        Hola, soy <span class="text-highlight">Naza</span> 👦💻
+                    </h1>
+                    
+                    <p class="about-description fade-in" data-delay="0.3s">
+                        Desarrollador Backend con 1 año de Experiencia </br>
+                        Especializadome en JavaScript y Python.
+                    </p>
+    
+                    <div class="about-experience fade-in" data-delay="0.5s">
+                        <h2>📌 Experiencia Destacada</h2>
+                        <ul>
+                            <h3>Analista y Desarrollador (Abril 2024 - Noviembre 2024)</h3>
+                            <li>Creación y mantenimiento de bases de datos</li>
+                            <li>Integración y automatización de procesos</li>
+                            <li>Optimización de rendimiento y escalabilidad</li>
+                            <li>Creación y mantenimiento de APIs</li>
+                            <li>Soluciones y reportes de Bugs</li>
+                        </ul>
+                    </div>
+    
+                    <div class="about-skills fade-in" data-delay="0.7s">
+                        <h2>🛠 Stack Principal</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">React JS</div>
+                            <div class="skill-item">Node JS</div>
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">My-SQL</div>
+                            <div class="skill-item">Kali Linux</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Columna Derecha - Foto -->
+                <div class="about-photo fade-in" data-delay="0.9s">
+                    <img src="./assets/images/imageHero.jpeg" 
+                         alt="Foto de Naza" 
+                         class="profile-image"
+                         loading="lazy">
+                    <div class="photo-border"></div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- ///////////////////////////////////  -->
+        <section id="experience" class="section"></section>
+
+        <!-- ///////////////////////////////////  -->
+        <section id="projects" class="section"></section>
+
+        <!-- ///////////////////////////////////  -->
+        <section id="contacts" class="section"></section>
+    </main>
+
+    <!-- Botón de tema -->
+    <button class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js" type="module"></script>
+</body>
+</html>

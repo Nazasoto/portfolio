@@ -14,6 +14,35 @@ export function initAbout() {
     fadeElements.forEach(el => observer.observe(el));
 }
 
+// Botón de CV
+function showCVPreview() {
+    const preview = document.querySelector('.cv-preview');
+    if (preview) {
+        preview.style.opacity = '1';
+        preview.style.visibility = 'visible';
+    }
+}
+
+function hideCVPreview() {
+    const preview = document.querySelector('.cv-preview');
+    if (preview) {
+        preview.style.opacity = '0';
+        preview.style.visibility = 'hidden';
+    }
+}
+
+// Versión alternativa con eventos directamente en JavaScript
+document.querySelectorAll('.download-button').forEach(button => {
+    button.addEventListener('mouseenter', showCVPreview);
+    button.addEventListener('mouseleave', hideCVPreview);
+    
+    // Para dispositivos táctiles
+    button.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        showCVPreview();
+    });
+});
+
 // Añadir keyframes dinámicamente
 const style = document.createElement('style');
 style.textContent = `

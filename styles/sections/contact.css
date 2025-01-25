@@ -1,0 +1,76 @@
+/* Estilos para la sección de Contacto */
+.contact-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.social-card {
+    background: rgba(106, 209, 183, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(106, 209, 183, 0.2);
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.social-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 auto;
+}
+
+.social-link .hover-arrow {
+    position: absolute;
+    right: -25px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: #6ad1b7;
+    font-size: 1.4rem;
+}
+
+.social-link:hover .hover-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Colores específicos para cada red social */
+.linkedin { color: #0a66c2; background: rgba(10, 102, 194, 0.1); }
+.github { color: #333; background: rgba(51, 51, 51, 0.1); }
+.email { color: #ea4335; background: rgba(234, 67, 53, 0.1); }
+.instagram {color: #833AB4; background: rgba(131, 58, 180, 0.1);}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(106, 209, 183, 0.2);
+}
+
+.social-card a{
+    text-decoration: none;
+}
+
+
+.social-link i {
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');

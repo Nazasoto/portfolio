@@ -15,6 +15,21 @@ export function initAbout() {
 }
 
 // Botón de CV
+document.querySelector('.download-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    // Crear enlace temporal
+    const link = document.createElement('a');
+    link.href = './assets/cv.pdf';
+    link.download = 'CV_Nazareno_Soto.pdf';
+    
+    // Simular clic
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+
 function showCVPreview() {
     const preview = document.querySelector('.cv-preview');
     if (preview) {

@@ -233,10 +233,15 @@
 
 
 /* Estilos del CV */
+
 .cv-container {
     position: relative;
     text-align: left;
     margin-top: 2rem;
+}
+
+.cv-container a{
+    text-decoration: none;
 }
 
 .download-button {

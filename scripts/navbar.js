@@ -24,19 +24,23 @@ export function initNavbar() {
     // Observer para detección de sección activa
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeId = `#${entry.target.id}`;
+            const activeId = `#${entry.target.id}`;
+            // Calcular qué tan centrada está la sección
+            const visibleRatio = entry.intersectionRatio;
+            const distanceFromTop = entry.boundingClientRect.top;
+        
+            // Priorizar la sección más centrada
+            if (visibleRatio > 0.5 || (distanceFromTop > 0 && distanceFromTop < window.innerHeight * 0.3)) {
                 navbarLinks.forEach(link => {
-                    const isActive = link.getAttribute('href') === activeId;
-                    link.parentElement.classList.toggle('active', isActive);
+                    link.parentElement.classList.toggle('active', link.getAttribute('href') === activeId);
                 });
             }
         });
     }, {
-        root: null,
-        rootMargin: `-${navbarHeight}px 0px 0px 0px`,
-        threshold: 0.35
-    });
+    root: null,
+    rootMargin: `-${navbarHeight}px 0px 0px 0px`,
+    threshold: [0.1, 0.5, 0.9] // Múltiples thresholds
+});
 
     // Manejo de clics en enlaces
     const handleLinkClick = (e, link) => {

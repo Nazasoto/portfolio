@@ -1,0 +1,14 @@
+.proyectos-content{
+    width: 100%;
+}
+
+.image-proyect a{
+    text-decoration: none;
+}
+
+
+.image-proyect img{
+    border-radius: 10px;
+    max-width: 350px;
+}
+

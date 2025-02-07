@@ -1,14 +1,52 @@
-.proyectos-content{
-    width: 100%;
-}
-
-.image-proyect a{
-    text-decoration: none;
-}
-
-
-.image-proyect img{
+/* Contenedor principal de la sección de proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Tarjeta individual de cada proyecto */
+  .proyecto-card {
+    background: var(--card-bg); /* Utiliza la variable de color definida en tu tema */
     border-radius: 10px;
-    max-width: 350px;
-}
-
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover para resaltar la tarjeta */
+  .proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Imagen del proyecto */
+  .proyecto-card img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Título del proyecto */
+  .proyecto-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  /* Descripción del proyecto */
+  .proyecto-card p {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  
+  /* Ajustes para enlaces (opcional) */
+  .proyecto-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
